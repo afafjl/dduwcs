@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import { useState } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
 import { useContext } from 'react'
-
+import  { useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify';
 const Register = () => {
 	const { registerUser } = useContext(AuthContext)
@@ -22,6 +22,7 @@ const Register = () => {
 		password: '',
 		confirmPassword: ''
 	})
+	const navigate = useNavigate();
 	const onChangeRegisterForm = event =>
 	setRegisterForm({
 		...registerForm,
@@ -76,6 +77,7 @@ const Register = () => {
 				toast(registerData.message )
 			}
 			else{
+				navigate('/');
 				toast(registerData.message )
 			}
 		} catch (error) {

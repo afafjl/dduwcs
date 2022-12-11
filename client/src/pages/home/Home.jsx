@@ -17,11 +17,11 @@ export const Home = () => {
 		<>
 			<Header />
 			<div className='home-container'>
-				<div
+				{/* <div
 					className='slider'
 					style={{
-						backgroundImage: `url(${PF + 'slider.jpg'})`,
-					}}></div>
+						backgroundImage: `url(${PF + 'soap-slider-1.jpg'})`,
+					}}></div> */}
 				<div className='content'>
 					<div className='list-content'>
 						<div className='content-item'>

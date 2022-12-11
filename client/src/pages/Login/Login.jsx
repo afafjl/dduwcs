@@ -19,7 +19,7 @@ const Login = () => {
 		username: '',
 		password: ''
 	})
-
+	const navigate = useNavigate();
 
 	// const { username, password } = loginForm
 	const onChangeLoginForm = event =>{
@@ -59,7 +59,8 @@ const Login = () => {
 				}
 				else{
 					toast.error(loginData.message);
-					this.props.navigate.push('/')
+
+					navigate('/');
 				}
 			} catch (error) {
 				console.log(error)
